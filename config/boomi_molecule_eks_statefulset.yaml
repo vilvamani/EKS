@@ -55,28 +55,6 @@ spec:
             mountPath: "/tmp"
           - name: cgroup
             mountPath: /sys/fs/cgroup
-        startupProbe:
-          failureThreshold: 60
-          exec:
-            command:
-              - sh
-              - /home/boomi/probe.sh
-              - startup
-        readinessProbe:
-          periodSeconds: 10
-          initialDelaySeconds: 10
-          exec:
-            command:
-              - sh
-              - /home/boomi/probe.sh
-              - readiness
-        livenessProbe:
-          periodSeconds: 60
-          exec:
-            command:
-              - sh
-              - /home/boomi/probe.sh
-              - liveness
         env:
         - name: BOOMI_ATOMNAME
           value: "Boomi-EKS"
