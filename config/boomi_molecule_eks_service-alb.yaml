@@ -10,5 +10,5 @@ spec:
   type: NodePort
   ports:
   - protocol: TCP
-    port: 9090
-    targetPort: 443
+    port: 443
+    targetPort: 9090
