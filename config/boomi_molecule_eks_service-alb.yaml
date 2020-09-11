@@ -7,7 +7,6 @@ metadata:
 spec:
   selector:
     app: molecule
-  type: NodePort
   ports:
   - name: https
     protocol: TCP
