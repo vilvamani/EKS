@@ -16,5 +16,5 @@ spec:
         paths:
           - path: /*
             backend:
-              serviceName: molecule-service-alb
+              serviceName: molecule-service
               servicePort: 443
